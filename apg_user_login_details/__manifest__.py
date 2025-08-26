@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'User Login details-karan',
+    'name': 'User Login details-karan-abcd',
     'version': '18.0.0.5',
     'category': 'Extra Tools',
     'summary': 'This module provides real-time visibility into which users have logged into a newly created or '
