@@ -12,7 +12,6 @@
                         <field name="date_time"/>
                         <field name="ip_address"/>
                         <field name="jatin"/>
-                        <field name="karan"/>
                     </group>
                 </sheet>
             </form>
