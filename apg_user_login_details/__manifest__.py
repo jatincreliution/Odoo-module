@@ -2,7 +2,7 @@
 
 {
     'name': 'User Login details-karan',
-    'version': '18.0.0.0',
+    'version': '18.0.0.1',
     'category': 'Extra Tools',
     'summary': 'This module provides real-time visibility into which users have logged into a newly created or '
                'cloned database. It helps administrators track login activity for better security, transparency,'
