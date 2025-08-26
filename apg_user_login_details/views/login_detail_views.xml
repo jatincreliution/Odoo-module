@@ -11,6 +11,7 @@
                         <field name="name"/>
                         <field name="date_time"/>
                         <field name="ip_address"/>
+                        <field name="jatin"/>
                     </group>
                 </sheet>
             </form>

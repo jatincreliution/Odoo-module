@@ -13,3 +13,4 @@ class LoginDetail(models.Model):
         default=lambda self: fields.datetime.now(),
         help="Date and time of log in")
     ip_address = fields.Char(string="IP Address", help="IP address of login")
+    jatin = fields.Char(string="Jatin Chavda Pote")
