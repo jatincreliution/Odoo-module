@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'User Login details',
+    'name': 'User Login details-jb',
     'version': '18.0.0.0',
     'category': 'Extra Tools',
     'summary': 'This module provides real-time visibility into which users have logged into a newly created or '
