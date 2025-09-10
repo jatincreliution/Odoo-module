@@ -1,1 +1,35 @@
+name: Deploy to EC2
 
+on:
+  push:
+    branches:
+      - main  # Trigger deployment when code is pushed to the 'main' branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
+    - name: Debug - Print EC2_HOST value
+      run: |
+        echo "EC2_HOST: $EC2_HOST"  # This will print the value of EC2_HOST to debug if it's set correctly.
+
+    - name: Add EC2 host to known hosts (with debugging)
+      run: |
+        echo "Adding EC2 host to known hosts..."
+        ssh-keyscan -v $EC2_HOST >> ~/.ssh/known_hosts
+        cat ~/.ssh/known_hosts
+
+    - name: Run upgrade script on EC2
+      run: |
+        echo "Running upgrade script on EC2..."
+        ssh -o StrictHostKeyChecking=no $EC2_USER@$EC2_HOST 'bash /home/ubuntu/upgrade.sh'
