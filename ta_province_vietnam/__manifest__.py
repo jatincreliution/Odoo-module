@@ -1,7 +1,7 @@
 {
     'name': 'Vietnam Province Merge 2025 | Cập nhật 34 tỉnh thành Việt Nam',
     'summary': 'Update 34 provinces of Vietnam according to Resolution 202/2025/QH15',
-    'version': '1.1.0',
+    'version': '2.1.0',
     'category': 'Localization',
     'author': 'Mountain Tran',
     'support': 'mountaintran2021@gmail.com',
