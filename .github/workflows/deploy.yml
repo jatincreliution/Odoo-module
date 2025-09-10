@@ -24,3 +24,8 @@ jobs:
       run: |
         echo "Running upgrade script on EC2..."
         ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo bash /home/ubuntu/upgrade.sh'
+
+    - name: Restart Odoo Service
+      run: |
+        echo "Restarting Odoo service on EC2..."
+        ssh -o StrictHostKeyChecking=no ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo systemctl restart odoo.service'
